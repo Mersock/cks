@@ -1,0 +1,11 @@
+name: myapp
+
+services:
+  platform:
+    image: viktoruj/runner
+    tty: true
+    environment:
+      AWS_ACCESS_KEY_ID: <AWS_ACCESS_KEY_ID>
+      AWS_SECRET_ACCESS_KEY: <AWS_SECRET_ACCESS_KEY>
+    entrypoint: [bash, -l, -c]
+    command: "tail -f"
